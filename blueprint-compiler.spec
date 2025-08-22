@@ -1,18 +1,22 @@
 Summary:	Markup language for GTK user interface files
 Summary(pl.UTF-8):	Język znaczników dla plików interfejsów użytkownika GTK
 Name:		blueprint-compiler
-Version:	0.16.0
+Version:	0.18.0
 Release:	1
 License:	LGPL v3+
 Group:		Development/Tools
-#Source0Download: https://gitlab.gnome.org/GNOME/blueprint-compiler/-/releases
-Source0:	https://gitlab.gnome.org/GNOME/blueprint-compiler/-/archive/v%{version}/%{name}-v%{version}.tar.bz2
-# Source0-md5:	1980201be2c6b7575ba414db0ecddc01
+# if not released with gnome downloads:
+##Source0Download: https://gitlab.gnome.org/GNOME/blueprint-compiler/-/releases
+#Source0:	https://gitlab.gnome.org/GNOME/blueprint-compiler/-/archive/v%{version}/%{name}-v%{version}.tar.bz2
+Source0:	https://download.gnome.org/sources/blueprint-compiler/0.18/%{name}-%{version}.tar.xz
+# Source0-md5:	28083db30b5772c081d91973c83d7b44
 URL:		https://gnome.pages.gitlab.gnome.org/blueprint-compiler/
 BuildRequires:	meson
 BuildRequires:	ninja >= 1.5
 BuildRequires:	python3 >= 1:3
 BuildRequires:	rpmbuild(macros) >= 2.042
+BuildRequires:	tar >= 1:1.22
+BuildRequires:	xz
 Requires:	gobject-introspection
 Requires:	python3-pygobject3
 BuildArch:	noarch
@@ -40,7 +44,7 @@ systemu budowania aplikacji. Nie dodaje nowych możliwości, po prostu
 ułatwia dostęp do istniejących.
 
 %prep
-%setup -q -n %{name}-v%{version}
+%setup -q
 
 %{__sed} -i -e '1s,/usr/bin/env python3,%{__python3},' blueprint-compiler.py
 

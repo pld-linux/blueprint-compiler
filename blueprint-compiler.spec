@@ -1,15 +1,15 @@
 Summary:	Markup language for GTK user interface files
 Summary(pl.UTF-8):	Język znaczników dla plików interfejsów użytkownika GTK
 Name:		blueprint-compiler
-Version:	0.18.0
+Version:	0.20.0
 Release:	1
 License:	LGPL v3+
 Group:		Development/Tools
 # if not released with gnome downloads:
 ##Source0Download: https://gitlab.gnome.org/GNOME/blueprint-compiler/-/releases
 #Source0:	https://gitlab.gnome.org/GNOME/blueprint-compiler/-/archive/v%{version}/%{name}-v%{version}.tar.bz2
-Source0:	https://download.gnome.org/sources/blueprint-compiler/0.18/%{name}-%{version}.tar.xz
-# Source0-md5:	28083db30b5772c081d91973c83d7b44
+Source0:	https://download.gnome.org/sources/blueprint-compiler/0.20/%{name}-%{version}.tar.xz
+# Source0-md5:	8167adac1cf8d437e383617f9c0d3406
 URL:		https://gnome.pages.gitlab.gnome.org/blueprint-compiler/
 BuildRequires:	meson
 BuildRequires:	ninja >= 1.5
